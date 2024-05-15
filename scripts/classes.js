@@ -42,3 +42,8 @@ window.onload = function(){
         console.error('Error fetching data:', error);
       });   
 }
+
+
+function makeClassDoc(c){
+  
+}
