@@ -17,6 +17,9 @@ function logout() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+    var cssFile = 'styles/main.css?v=' + new Date().getTime();
+    var tag = '<link rel="stylesheet" type="text/css" href="' + cssFile + '">';
+    document.head.innerHTML += tag;
     checkInactivity();
     var lastActivityTime = localStorage.getItem('lastActivityTime');
     if (lastActivityTime) {

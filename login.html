@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="styles/login.css">
     <script src="scripts/colorpick.js"></script>
     <script src="scripts/login.js"></script>
+    <script>
+        var cssFile = 'styles/main.css?v=' + new Date().getTime();
+        document.write('<link rel="stylesheet" type="text/css" href="' + cssFile + '">');
+    </script>
 </head>
 <body>
     <div id="colorpick" class="overlay">
