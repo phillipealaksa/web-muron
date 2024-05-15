@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="cz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moje Třídy</title>
+    <link rel="icon" href="images/main_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/main.css?v=1.01">
+    <link rel="stylesheet" href="styles/classes.css">
+    <link rel="stylesheet" href="styles/colorpick.css">
+    <script src="scripts/colorpick.js"></script>
+    <script src="scripts/checkLogedin.js"></script>
+    <script src="scripts/classes.js"></script>
+</head>
+<body>
+    <div id="colorpick" class="overlay">
+        <a class="closebtn" style="cursor: pointer;" onclick="closeNav()">&times;</a>
+        <div class="input-container">
+            <label for="primaryColor">Set primary color:</label>
+            <input type="color" id="primaryColor" oninput="setPrimcol()">
+            <br>
+            <label for="secondaryColor">Set secondary color:</label>
+            <input type="color" id="secondaryColor"  oninput="setSeccol()">
+        </div>
+    </div>
+    <div class="header-container">
+       <div class="header-title">
+            Moje Třídy
+       </div>
+       <div class="color-picker">
+        <img src="images/rgb.png" style="cursor: pointer;" onclick="openNav(); setColvals()">
+       </div>
+       <div class="header-menu">
+            ☰
+            <div class="menu-content">
+                <a href="index.html">Domů</a>
+                <a href="profile.html">Profil</a>
+                <a href="classes.html">Třídy</a>
+                <a href="login.html">Odhlásit</a>
+            </div>
+       </div>
+    </div>
+    <div id="class-container" class="class-container">
+
+    </div>
+</body>
+</html>

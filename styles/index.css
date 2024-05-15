@@ -1,0 +1,43 @@
+.container{
+    width: 100%;
+    left: 0;
+    top: 35%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+}
+
+.item{
+    flex: 0 0 calc(20% - 10px);
+    margin: 5px;
+    position: relative;
+    border: solid 2px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: clamp(10px, 3vw, 60px);
+}
+
+img{
+    position: relative;
+    margin-top: 3%;
+    width: 7vw;
+    height: auto;
+    max-width: 200px;
+}
+
+.item:hover {background-color: rgba(0,0,0,0.4); cursor: pointer;}
+
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column; 
+    }
+    .item{
+        flex: 0 0 calc(10% - 0px);
+    }
+    img{
+        width: 10%;
+    }
+}

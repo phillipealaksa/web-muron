@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="cz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil</title>
+    <link rel="icon" href="images/main_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/main.css?v=1.01">
+    <link rel="stylesheet" href="styles/colorpick.css">
+    <link rel="stylesheet" href="styles/profile.css">
+    <script src="scripts/colorpick.js"></script>
+    <script src="scripts/profile.js"></script>
+    <script src="scripts/checkLogedin.js"></script> 
+</head>
+
+<body>
+    <div id="colorpick" class="overlay">
+        <a class="closebtn" style="cursor: pointer;" onclick="closeNav()">&times;</a>
+        <div class="input-container">
+            <label for="primaryColor">Set primary color:</label>
+            <input type="color" id="primaryColor" oninput="setPrimcol()">
+            <br>
+            <label for="secondaryColor">Set secondary color:</label>
+            <input type="color" id="secondaryColor" oninput="setSeccol()">
+        </div>
+    </div>
+    <div class="header-container">
+        <div class="header-title">
+            Profil
+        </div>
+        <div class="color-picker">
+            <img src="images/rgb.png" style="cursor: pointer;" onclick="openNav(); setColvals()">
+        </div>
+        <div class="header-menu">
+            ☰
+            <div class="menu-content">
+                <a href="index.html">Domů</a>
+                <a href="profile.html">Profil</a>
+                <a href="classes.html">Třídy</a>
+                <a href="login.html">Odhlásit</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div id="profile_pic" class="image-container" onclick="document.getElementById('imgInput').click();">
+            <div class="image-overlay">
+                <img src="images/camera.png">
+            </div>
+            <form action="saveFile.php" method="post" enctype="multipart/form-data">
+                <input type="file" id="imgInput" name="imgInput" accept="image/*" style="display: none;"
+                    onchange="handlePic(event);">
+                <input type="hidden" name="uploadDir" value="/images/">
+                <input type="hidden" name="returnDir" value="profile.html">
+                <input type="submit" id="imgSubmit" style="display: none;">
+            </form>
+        </div>
+        <div class="detail-container">
+            <div class="detail">
+                <label for="name">Jmeno</label>
+                <input id="name" type="text" oninput="resizeInput(this); updateDetails(this);">
+            </div>
+            <div class="detail">
+                <label for="password">Heslo</label>
+                <input id="password" type="password" onmousedown="togglePassword(true);" onmouseup="togglePassword(false);" oninput="resizeInput(this); updateDetails(this);"> 
+            </div>
+            <div class="detail">
+                <label for="school">Škola</label>
+                <input id="school" type="text" oninput="resizeInput(this); updateDetails(this);">
+            </div>
+        </div>
+        <label id="classesTag" for="classes">Třídy</label>
+        <div id="class-container" class="class-container">
+            
+        </div>
+    </div>
+</body>
+
+</html>

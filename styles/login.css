@@ -1,0 +1,80 @@
+.login-container {
+    width: 50%;
+    height: 30%;
+    position: absolute;
+    top: 35%;
+    left: 25%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(10px, 4vw, 80px);
+}
+
+.password {
+    width: 50%;
+    height: 60%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.password input{
+    width: auto;
+    display: block;
+    border: solid 1px;
+    background-color: transparent;
+    font-size: clamp(20px, 1.5vw, 30px);
+    text-align: center;
+    cursor: pointer;
+}
+
+.password label{
+    display: block;
+    font-size: clamp(20px, 1.5vw, 30px);
+}
+
+.boton-elegante {
+    padding: 15px 30px;
+    border: 2px solid #2c2c2c;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.4s ease;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+    margin-top: 5%;
+  }
+  
+  .boton-elegante::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(255, 255, 255, 0) 70%
+    );
+    transform: scale(0);
+    transition: transform 0.5s ease;
+  }
+  
+  .boton-elegante:hover::after {
+    transform: scale(4);
+  }
+  
+  .boton-elegante:hover {
+    border-color: #666666;
+    background: #292929;
+  }

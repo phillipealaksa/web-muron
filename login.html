@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="cz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Přihlášení</title>
+    <link rel="icon" href="images/main_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/main.css?v=1.01">
+    <link rel="stylesheet" href="styles/colorpick.css">
+    <link rel="stylesheet" href="styles/login.css">
+    <script src="scripts/colorpick.js"></script>
+    <script src="scripts/login.js"></script>
+</head>
+<body>
+    <div id="colorpick" class="overlay">
+        <a class="closebtn" style="cursor: pointer;" onclick="closeNav()">&times;</a>
+        <div class="input-container">
+            <label for="primaryColor">Set primary color:</label>
+            <input type="color" id="primaryColor" oninput="setPrimcol()">
+            <br>
+            <label for="secondaryColor">Set secondary color:</label>
+            <input type="color" id="secondaryColor"  oninput="setSeccol()">
+        </div>
+    </div>
+    <div class="header-container">
+       <div class="header-title">
+            Přihlášení
+       </div>
+       <div class="color-picker">
+        <img src="images/rgb.png" style="cursor: pointer;" onclick="openNav(); setColvals()">
+       </div>
+    </div>
+    <div class="login-container">
+        Vítejte
+        <div class="password">
+            <label for="password">Heslo</label>
+            <input id="password" type="password" onmousedown="togglePassword(true);" onmouseup="togglePassword(false);" oninput="resizeInput(this);"> 
+            <button class="boton-elegante" onclick="checkPassword()">Přihlásit</button>
+        </div>
+    </div>
+</body>
+</html>
