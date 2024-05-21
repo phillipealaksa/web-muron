@@ -1,17 +1,17 @@
 This is a simple web page for organising classes with files for teachers
 
-<span style="font-size:2em;">ROOT:</span>
+ROOT:
 In root there are all html documents aswell as php scripts
 
-<span style="font-size:2em;">styles:</span>
+styles:
 All css styles
 
-<span style="font-size:2em;">scripts:</span>
+scripts:
 All js scripts
 
-<span style="font-size:2em;">images:</span>
+images:
 All images used
 
-<span style="font-size:2em;">data:</span>
+data:
 Contains user info and class files
 
