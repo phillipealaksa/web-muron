@@ -1,6 +1,6 @@
 :root{
-    --main-bg-col: #18c953;
-    --main-txt-col: #0a16c2;
+    --main-bg-col: #0eb421;
+    --main-txt-col: #0a2fc2;
 }
 
 body{
@@ -27,13 +27,13 @@ body{
     order: 2;
     width: 50%;
     text-align: center;
-    font-size: clamp(10px, 3vw, 60px);
+    font-size: 3em;
 }
 
 .header-menu{
     text-align: center;
     margin-right: 10%;
-    font-size: clamp(10px, 3vw, 60px);
+    font-size: 3em;
 }
 
 .menu-content {
@@ -49,7 +49,7 @@ body{
 .menu-content a{
     background-color: rgba(0,0,0,0.4);
     color: var(--main-txt-col);
-    font-size: clamp(10px, 1vw, 30px);
+    font-size: 0.5em;
     border: solid 2px;
     padding:  2px 5px;
     text-align: center;

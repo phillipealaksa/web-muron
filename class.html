@@ -6,8 +6,10 @@
     <link rel="icon" href="images/main_icon.png" type="image/x-icon">
     <link rel="stylesheet" href="styles/main.css?v=1.01">
     <link rel="stylesheet" href="styles/colorpick.css">
+    <link rel="stylesheet" href="styles/class.css">
     <script src="scripts/colorpick.js"></script>
     <script src="scripts/onLoad.js"></script>
+    <script src="scripts/class.js"></script>
 </head>
 <body>
     <div id="colorpick" class="overlay">
@@ -37,6 +39,15 @@
             </div>
        </div>
     </div>
-    
+    <img class="add-file" src="images/add.png" onclick="document.getElementById('Input').click();">
+    <form action="saveFile.php" method="post" enctype="multipart/form-data">
+        <input type="file" id="Input" name="Input" style="display: none;" onchange="document.getElementById('fileSubmit').click();">
+        <input type="hidden" id="uploadDir" name="uploadDir">
+        <input type="hidden" name="returnDir" value="class.html">
+        <input type="submit" id="fileSubmit" style="display: none;">
+    </form>
+    <div id="file-container" class="file-container">
+    </div>
+
 </body>
 </html>

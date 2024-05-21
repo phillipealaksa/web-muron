@@ -1,0 +1,23 @@
+.add-file {
+    position: absolute;
+    width: 3vw;
+    height: auto;
+    max-width: 50px;
+    left: 96%;
+    top: 15%;
+    cursor: pointer;
+}
+
+.file-container{
+    width: 90%;
+    height: 80%;
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    row-gap: 2%;
+    overflow-y: scroll;
+}

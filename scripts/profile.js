@@ -40,7 +40,7 @@ function handlePic(event) {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
         },
-        body: 'filepath=' + encodeURIComponent(oldpic)
+        body: { path: oldpic, type: 'file'}
       })
         .then(response => {
           if (response.ok) {
@@ -179,6 +179,10 @@ function setClasses() {
           div.onmouseleave = function() {
             this.style.backgroundColor = "rgba(0,0,0,0)";
           };
+          div.onclick = function() {
+            localStorage.setItem('selectedClass', className);
+            window.location.href = "class.html";
+          }
           div.id = className;
           div.innerHTML = className;
           document.getElementById("class-container").appendChild(div);

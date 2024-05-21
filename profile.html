@@ -43,13 +43,12 @@
         </div>
     </div>
     <div class="container">
-        <div id="profile_pic" class="image-container" onclick="document.getElementById('imgInput').click();">
+        <div id="profile_pic" class="image-container" onclick="document.getElementById('Input').click();">
             <div class="image-overlay">
                 <img src="images/camera.png">
             </div>
             <form action="saveFile.php" method="post" enctype="multipart/form-data">
-                <input type="file" id="imgInput" name="imgInput" accept="image/*" style="display: none;"
-                    onchange="handlePic(event);">
+                <input type="file" id="Input" name="Input" accept="image/*" style="display: none;" onchange="handlePic(event);">
                 <input type="hidden" name="uploadDir" value="/images/">
                 <input type="hidden" name="returnDir" value="profile.html">
                 <input type="submit" id="imgSubmit" style="display: none;">

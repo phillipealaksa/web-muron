@@ -1,6 +1,6 @@
 .container{
-    width: 100%;
-    left: 0;
+    width: 60%;
+    left: 20%;
     top: 35%;
     position: absolute;
     display: flex;
@@ -8,11 +8,11 @@
     flex-wrap: wrap;
     align-content: flex-start;
     justify-content: center;
+    column-gap: 2%;
 }
 
 .item{
-    flex: 0 0 calc(20% - 10px);
-    margin: 5px;
+    flex-basis: 30%;
     position: relative;
     border: solid 2px;
     border-radius: 20px;
@@ -37,7 +37,8 @@ img{
     .item{
         flex: 0 0 calc(10% - 0px);
     }
-    img{
+    .container img{
         width: 10%;
     }
 }
+

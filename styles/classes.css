@@ -8,8 +8,18 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     row-gap: calc(10% - 8px);
     column-gap: calc(2% - 2px);
     overflow-y: scroll;
+}
+
+.add-class {
+    position: absolute;
+    width: 3vw;
+    height: auto;
+    max-width: 50px;
+    left: 96%;
+    top: 15%;
+    cursor: pointer;
 }
